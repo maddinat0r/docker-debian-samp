@@ -7,6 +7,7 @@ RUN dpkg --add-architecture i386 \
 		wget \
 		g++-multilib \
 		make \
+		git \
 		libssl-dev:i386
 
 WORKDIR /root/downloads
