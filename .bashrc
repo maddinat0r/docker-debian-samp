@@ -15,3 +15,5 @@ alias l='ls $LS_OPTIONS -lhA'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+
+cd
