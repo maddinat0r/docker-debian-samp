@@ -10,6 +10,10 @@ RUN dpkg --add-architecture i386 \
 		git \
 		libssl-dev:i386 \
 		unzip \
+		vim \
+		less \
+		man \
+		libmysqlclient-dev:i386 \
 	# other things
 	&& mkdir /root/downloads \
 	# install new CMake
