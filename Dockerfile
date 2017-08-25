@@ -18,13 +18,13 @@ RUN dpkg --add-architecture i386 \
 	&& mkdir /root/downloads \
 	# install new CMake
 	&& cd /root/downloads \
-	&& wget https://cmake.org/files/v3.7/cmake-3.7.2-Linux-x86_64.sh \
-	&& chmod +x cmake-3.7.2-Linux-x86_64.sh \
-	&& ./cmake-3.7.2-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir \
+	&& wget https://cmake.org/files/v3.9/cmake-3.9.1-Linux-x86_64.sh \
+	&& chmod +x cmake-3.9.1-Linux-x86_64.sh \
+	&& ./cmake-3.9.1-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir \
 	# Boost
-	&& wget https://sourceforge.net/projects/boost/files/boost/1.63.0/boost_1_63_0.tar.gz \
-	&& tar xfz boost_1_63_0.tar.gz \
-	&& cd boost_1_63_0 \
+	&& wget https://dl.bintray.com/boostorg/release/1.65.0/source/boost_1_65_0.tar.gz \
+	&& tar xfz boost_1_65_0.tar.gz \
+	&& cd boost_1_65_0 \
 	&& ./bootstrap.sh --prefix=/usr/local --with-libraries=system,chrono,thread,regex,date_time,atomic \
 	&& ./b2 variant=release link=static threading=multi address-model=32 runtime-link=shared -j2 install \
 	# SA-MP server + includes
