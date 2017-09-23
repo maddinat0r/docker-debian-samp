@@ -8,11 +8,12 @@ RUN dpkg --add-architecture i386 \
 		g++-multilib \
 		make \
 		git \
-		libssl-dev:i386 \
 		unzip \
 		vim \
 		less \
 		man \
+		zlib1g-dev:i386 \ 
+		libssl-dev:i386 \
 		libmysqlclient-dev:i386 \
 	# other things
 	&& mkdir /root/downloads \
