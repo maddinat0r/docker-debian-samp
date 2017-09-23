@@ -22,9 +22,9 @@ RUN dpkg --add-architecture i386 \
 	&& chmod +x cmake-3.9.1-Linux-x86_64.sh \
 	&& ./cmake-3.9.1-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir \
 	# Boost
-	&& wget https://dl.bintray.com/boostorg/release/1.65.0/source/boost_1_65_0.tar.gz \
-	&& tar xfz boost_1_65_0.tar.gz \
-	&& cd boost_1_65_0 \
+	&& wget https://dl.bintray.com/boostorg/release/1.65.1/source/boost_1_65_1.tar.gz \
+	&& tar xfz boost_1_65_1.tar.gz \
+	&& cd boost_1_65_1 \
 	&& ./bootstrap.sh --prefix=/usr/local --with-libraries=system,chrono,thread,regex,date_time,atomic \
 	&& ./b2 variant=release link=static threading=multi address-model=32 runtime-link=shared -j2 install \
 	# SA-MP server + includes
