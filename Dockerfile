@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:stretch
 
 RUN dpkg --add-architecture i386 \
 	&& apt-get update \
@@ -14,7 +14,7 @@ RUN dpkg --add-architecture i386 \
 		less \
 		man \
 		libssl-dev:i386 \
-		libmysqlclient-dev:i386
+		libmariadb-dev:i386
 
 WORKDIR /root
 
