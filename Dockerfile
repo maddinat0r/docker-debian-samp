@@ -14,9 +14,10 @@ RUN dpkg --add-architecture i386 \
 		man \
 		zlib1g-dev:i386 \ 
 		libssl-dev:i386 \
-		libmysqlclient-dev:i386 \
-	# other things
-	&& mkdir /root/downloads \
+		libmysqlclient-dev:i386
+
+
+RUN mkdir /root/downloads \
 	# install new CMake
 	&& cd /root/downloads \
 	&& wget https://cmake.org/files/v3.9/cmake-3.9.1-Linux-x86_64.sh \
