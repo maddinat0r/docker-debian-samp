@@ -43,11 +43,8 @@ RUN dpkg --add-architecture i386 \
 	&& ldconfig \
 	# delete download folder
 	&& cd /root \
-	&& rm -rf /root/downloads \
-	# create output folder for volume mounting
-	&& mkdir /opt/output
+	&& rm -rf /root/downloads
 
-VOLUME /opt/output
 COPY .bashrc /root
 
 CMD ["/bin/bash"]
