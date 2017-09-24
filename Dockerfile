@@ -17,6 +17,7 @@ RUN dpkg --add-architecture i386 \
 		libssl-dev:i386 \
 		libmysqlclient-dev:i386
 
+WORKDIR /root
 
 RUN mkdir /root/downloads \
 	# install new CMake
