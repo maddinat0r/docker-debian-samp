@@ -13,7 +13,6 @@ RUN dpkg --add-architecture i386 \
 		vim \
 		less \
 		man \
-		zlib1g-dev:i386 \ 
 		libssl-dev:i386 \
 		libmysqlclient-dev:i386
 
