@@ -21,9 +21,9 @@ WORKDIR /root
 RUN mkdir /root/downloads \
 	# install new CMake
 	&& cd /root/downloads \
-	&& wget https://cmake.org/files/v3.9/cmake-3.9.1-Linux-x86_64.sh \
-	&& chmod +x cmake-3.9.1-Linux-x86_64.sh \
-	&& ./cmake-3.9.1-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir \
+	&& wget https://cmake.org/files/v3.9/cmake-3.9.4-Linux-x86_64.sh \
+	&& chmod +x cmake-3.9.4-Linux-x86_64.sh \
+	&& ./cmake-3.9.4-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir \
 	# Boost
 	&& wget https://dl.bintray.com/boostorg/release/1.65.1/source/boost_1_65_1.tar.gz \
 	&& tar xfz boost_1_65_1.tar.gz \
