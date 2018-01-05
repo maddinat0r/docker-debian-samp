@@ -21,19 +21,19 @@ WORKDIR /root
 RUN mkdir /root/downloads \
 	# install new CMake
 	&& cd /root/downloads \
-	&& wget https://cmake.org/files/v3.9/cmake-3.9.4-Linux-x86_64.sh \
+	&& wget -q https://cmake.org/files/v3.9/cmake-3.9.4-Linux-x86_64.sh \
 	&& chmod +x cmake-3.9.4-Linux-x86_64.sh \
 	&& ./cmake-3.9.4-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir \
 	# Boost
-	&& wget https://dl.bintray.com/boostorg/release/1.65.1/source/boost_1_65_1.tar.gz \
+	&& wget -q https://dl.bintray.com/boostorg/release/1.65.1/source/boost_1_65_1.tar.gz \
 	&& tar xfz boost_1_65_1.tar.gz \
 	&& cd boost_1_65_1 \
 	&& ./bootstrap.sh --prefix=/usr/local --with-libraries=system,chrono,thread,regex,date_time,atomic \
 	&& ./b2 variant=release link=static threading=multi address-model=32 runtime-link=shared -j2 install \
 	# SA-MP server + includes
-	&& wget http://files.sa-mp.com/samp037svr_R2-1.tar.gz \
+	&& wget -q http://files.sa-mp.com/samp037svr_R2-1.tar.gz \
 	&& tar xfz samp037svr_R2-1.tar.gz \
-	&& wget http://files.sa-mp.com/samp037_svr_R2-1-1_win32.zip \
+	&& wget -q http://files.sa-mp.com/samp037_svr_R2-1-1_win32.zip \
 	&& unzip samp037_svr_R2-1-1_win32.zip pawno/include/* \
 	&& mv pawno/ samp03/ \
 	&& mv samp03/ /root \
