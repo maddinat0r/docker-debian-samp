@@ -40,9 +40,9 @@ RUN \
 # SA-MP server + includes
 RUN \ 
 	mkdir -p /tmp/samp && \ 
-	wget -q -O /tmp/samp/sampsvr-linux.tar.gz http://files.sa-mp.com/samp037svr_R2-1.tar.gz && \ 
+	wget -q -O /tmp/samp/sampsvr-linux.tar.gz http://files.sa-mp.com/samp037svr_R2-2-1.tar.gz && \ 
 	tar xfz /tmp/samp/sampsvr-linux.tar.gz -C /root/ && \ 
-	wget -q -O /tmp/samp/sampsvr-win32.zip http://files.sa-mp.com/samp037_svr_R2-1-1_win32.zip && \ 
+	wget -q -O /tmp/samp/sampsvr-win32.zip http://files.sa-mp.com/samp037_svr_R2-2-1_win32.zip && \ 
 	unzip /tmp/samp/sampsvr-win32.zip pawno/include/* -d /root/samp03 && \ 
 	rm -rf /tmp/samp
 
