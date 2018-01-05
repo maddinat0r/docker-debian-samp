@@ -38,7 +38,7 @@ RUN mkdir /root/downloads \
 	&& mv pawno/ samp03/ \
 	&& mv samp03/ /root \
 	# PAWN compiler
-	&& PAWN_COMPILER_VERSION=3.10.2 \
+	&& PAWN_COMPILER_VERSION=3.10.6 \
 	&& wget https://github.com/Southclaws/pawn/releases/download/v${PAWN_COMPILER_VERSION}/pawnc-${PAWN_COMPILER_VERSION}-linux.tar.gz \
 	&& tar xfz pawnc-${PAWN_COMPILER_VERSION}-linux.tar.gz \
 	&& mv pawnc-${PAWN_COMPILER_VERSION}-linux/bin/* /usr/local/bin \
