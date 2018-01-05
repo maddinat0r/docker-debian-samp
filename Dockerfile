@@ -38,10 +38,11 @@ RUN mkdir /root/downloads \
 	&& mv pawno/ samp03/ \
 	&& mv samp03/ /root \
 	# PAWN compiler
-	&& wget https://github.com/Zeex/pawn/releases/download/v3.10.2/pawnc-3.10.2-linux.tar.gz \
-	&& tar xfz pawnc-3.10.2-linux.tar.gz \
-	&& mv pawnc-3.10.2-linux/bin/* /usr/local/bin \
-	&& mv pawnc-3.10.2-linux/lib/* /usr/local/lib \
+	&& PAWN_COMPILER_VERSION=3.10.2 \
+	&& wget https://github.com/Zeex/pawn/releases/download/v${PAWN_COMPILER_VERSION}/pawnc-${PAWN_COMPILER_VERSION}-linux.tar.gz \
+	&& tar xfz pawnc-${PAWN_COMPILER_VERSION}-linux.tar.gz \
+	&& mv pawnc-${PAWN_COMPILER_VERSION}-linux/bin/* /usr/local/bin \
+	&& mv pawnc-${PAWN_COMPILER_VERSION}-linux/lib/* /usr/local/lib \
 	&& ldconfig \
 	# delete download folder
 	&& cd /root \
