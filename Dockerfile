@@ -16,7 +16,6 @@ RUN dpkg --add-architecture i386 \
 		libssl-dev:i386 \
 		libmariadb-dev:i386
 
-WORKDIR /root
 
 RUN mkdir /root/downloads \
 	# install new CMake
@@ -50,4 +49,5 @@ RUN mkdir /root/downloads \
 
 COPY .bashrc /root
 
+WORKDIR /root
 CMD ["/bin/bash"]
