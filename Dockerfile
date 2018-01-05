@@ -29,6 +29,7 @@ RUN \
 	mkdir -p /tmp/boost && \ 
 	wget -q -O /tmp/boost/boost.tar.gz https://dl.bintray.com/boostorg/release/1.65.1/source/boost_1_65_1.tar.gz && \ 
 	tar xfz /tmp/boost/boost.tar.gz -C /tmp/boost/ --strip-components=1 && \ 
+	sed -i 's|my_dir="."|my_dir="/tmp/boost"|g' /tmp/boost/bootstrap.sh && \ 
 	./tmp/boost/bootstrap.sh --prefix=/usr/local --with-libraries=system,chrono,thread,regex,date_time,atomic && \ 
     ./tmp/boost/b2 variant=release link=static threading=multi address-model=32 runtime-link=shared -j2 install && \ 
 	rm -rf /tmp/boost
