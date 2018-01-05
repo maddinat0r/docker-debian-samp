@@ -1,9 +1,9 @@
 FROM debian:jessie
 
 RUN dpkg --add-architecture i386 \
-	&& apt-get update \
-	&& apt-get upgrade -y \
-	&& apt-get install -y --no-install-recommends \
+	&& apt-get -qq update \
+	&& apt-get -qq upgrade -y \
+	&& apt-get -qq install -y --no-install-recommends \
 		ca-certificates \
 		wget \
 		g++-multilib \
