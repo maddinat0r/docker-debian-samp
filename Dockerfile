@@ -39,7 +39,7 @@ RUN mkdir /root/downloads \
 	&& mv samp03/ /root \
 	# PAWN compiler
 	&& PAWN_COMPILER_VERSION=3.10.2 \
-	&& wget https://github.com/Zeex/pawn/releases/download/v${PAWN_COMPILER_VERSION}/pawnc-${PAWN_COMPILER_VERSION}-linux.tar.gz \
+	&& wget https://github.com/Southclaws/pawn/releases/download/v${PAWN_COMPILER_VERSION}/pawnc-${PAWN_COMPILER_VERSION}-linux.tar.gz \
 	&& tar xfz pawnc-${PAWN_COMPILER_VERSION}-linux.tar.gz \
 	&& mv pawnc-${PAWN_COMPILER_VERSION}-linux/bin/* /usr/local/bin \
 	&& mv pawnc-${PAWN_COMPILER_VERSION}-linux/lib/* /usr/local/lib \
