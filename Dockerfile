@@ -33,7 +33,7 @@ RUN \
 	tar xfz /tmp/boost/boost.tar.gz -C /tmp/boost/ --strip-components=1 && \ 
 	cd /tmp/boost && \ 
 	./bootstrap.sh --prefix=/usr/local --with-libraries=system,chrono,thread,regex,date_time,atomic && \ 
-	./b2 variant=release link=static threading=multi address-model=32 runtime-link=shared -j2 install && \ 
+	./b2 variant=release link=static threading=multi address-model=32 runtime-link=shared -j2 -d0 install && \ 
 	cd - && \ 
 	rm -rf /tmp/boost
 
