@@ -27,7 +27,7 @@ RUN \
 
 # Boost
 RUN \ 
-	BOOST_VERSION=1.65.1 && \ 
+	BOOST_VERSION=1.67.0 && \ 
 	mkdir -p /tmp/boost && \ 
 	wget -q -O /tmp/boost/boost.tar.gz https://dl.bintray.com/boostorg/release/${BOOST_VERSION}/source/boost_`echo $BOOST_VERSION | sed 's|\.|_|g'`.tar.gz && \ 
 	tar xfz /tmp/boost/boost.tar.gz -C /tmp/boost/ --strip-components=1 && \ 
