@@ -18,7 +18,7 @@ RUN dpkg --add-architecture i386 \
 
 # CMake
 RUN \ 
-	CMAKE_VERSION=3.10.1 && \ 
+	CMAKE_VERSION=3.11.4 && \ 
 	mkdir -p /tmp/cmake && \ 
 	wget -q -O /tmp/cmake/cmake.sh https://cmake.org/files/v`expr "$CMAKE_VERSION" : '\([0-9][0-9]*\.[0-9][0-9]*\)'`/cmake-${CMAKE_VERSION}-Linux-x86_64.sh && \ 
 	chmod +x /tmp/cmake/cmake.sh && \ 
