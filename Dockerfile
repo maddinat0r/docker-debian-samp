@@ -18,7 +18,7 @@ RUN dpkg --add-architecture i386 \
 
 # CMake
 RUN \ 
-	CMAKE_VERSION=3.11.4 && \ 
+	CMAKE_VERSION=3.15.4 && \ 
 	mkdir -p /tmp/cmake && \ 
 	wget -q -O /tmp/cmake/cmake.sh https://cmake.org/files/v`expr "$CMAKE_VERSION" : '\([0-9][0-9]*\.[0-9][0-9]*\)'`/cmake-${CMAKE_VERSION}-Linux-x86_64.sh && \ 
 	chmod +x /tmp/cmake/cmake.sh && \ 
@@ -27,7 +27,7 @@ RUN \
 
 # Boost
 RUN \ 
-	BOOST_VERSION=1.67.0 && \ 
+	BOOST_VERSION=1.69.0 && \ 
 	mkdir -p /tmp/boost && \ 
 	wget -q -O /tmp/boost/boost.tar.gz https://dl.bintray.com/boostorg/release/${BOOST_VERSION}/source/boost_`echo $BOOST_VERSION | sed 's|\.|_|g'`.tar.gz && \ 
 	tar xfz /tmp/boost/boost.tar.gz -C /tmp/boost/ --strip-components=1 && \ 
@@ -48,9 +48,9 @@ RUN \
 
 # PAWN compiler
 RUN \ 
-	PAWN_COMPILER_VERSION=3.10.8 && \ 
+	PAWN_COMPILER_VERSION=3.10.9 && \ 
 	mkdir -p /tmp/pawncc && \ 
-	wget -q -O /tmp/pawncc/pawncc.tar.gz https://github.com/Southclaws/pawn/releases/download/v${PAWN_COMPILER_VERSION}/pawnc-${PAWN_COMPILER_VERSION}-linux.tar.gz && \ 
+	wget -q -O /tmp/pawncc/pawncc.tar.gz https://github.com/pawn-lang/compiler/releases/download/v${PAWN_COMPILER_VERSION}/pawnc-${PAWN_COMPILER_VERSION}-linux.tar.gz && \ 
 	tar xfz /tmp/pawncc/pawncc.tar.gz -C /usr/local/ --strip-components=1 && \ 
 	ldconfig && \ 
 	rm -rf /tmp/pawncc
