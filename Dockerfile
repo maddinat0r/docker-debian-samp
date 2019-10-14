@@ -50,7 +50,7 @@ RUN \
 RUN \ 
 	PAWN_COMPILER_VERSION=3.10.8 && \ 
 	mkdir -p /tmp/pawncc && \ 
-	wget -q -O /tmp/pawncc/pawncc.tar.gz https://github.com/Southclaws/pawn/releases/download/v${PAWN_COMPILER_VERSION}/pawnc-${PAWN_COMPILER_VERSION}-linux.tar.gz && \ 
+	wget -q -O /tmp/pawncc/pawncc.tar.gz https://github.com/pawn-lang/compiler/releases/download/v${PAWN_COMPILER_VERSION}/pawnc-${PAWN_COMPILER_VERSION}-linux.tar.gz && \ 
 	tar xfz /tmp/pawncc/pawncc.tar.gz -C /usr/local/ --strip-components=1 && \ 
 	ldconfig && \ 
 	rm -rf /tmp/pawncc
